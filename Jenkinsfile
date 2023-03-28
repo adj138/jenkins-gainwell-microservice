@@ -31,4 +31,15 @@ pipeline {
 			}
 		}
 	}
+	post {
+		always {
+			echo "Awsome, this message will always appear in the consol log"
+		}
+		success {
+			echo ":-) This message will appear only after SUCCESS"
+		}
+		failure {
+			echo ":- ( This message will appear only after Failure"
+		}
+	}
 }
